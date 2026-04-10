@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amor en Flor | Contact</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        pale: '#D3968C',
+                        rose: '#D3968C',
+                        black: '#000000',
+                        white: '#FFFFFF'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-white font-sans text-black flex flex-col min-h-screen">
+
+    <nav class="bg-white shadow-sm relative z-50 border-b border-pale">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20">
+                <div class="flex items-center">
+                    <a href="index.html" class="text-3xl font-serif text-rose font-bold tracking-tight">Amor en Flor</a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-black/70 hover:text-rose transition">Home</a>
+                    <a href="about.html" class="text-black/70 hover:text-rose transition">About</a>
+                    <a href="products.html" class="text-black/70 hover:text-rose transition">Products</a>
+                    <a href="contact.html" class="text-rose font-medium">Contact</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-btn" class="text-black hover:text-rose focus:outline-none">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu"
+            class="md:hidden overflow-hidden transition-all duration-300 ease-in-out max-h-0 bg-white absolute w-full shadow-md border-b border-pale">
+            <div class="px-4 pt-2 pb-4 space-y-2">
+                <a href="index.html"
+                    class="block px-3 py-2 text-black/80 hover:bg-pale/50 hover:text-rose rounded transition">Home</a>
+                <a href="about.html"
+                    class="block px-3 py-2 text-black/80 hover:bg-pale/50 hover:text-rose rounded transition">About</a>
+                <a href="products.html"
+                    class="block px-3 py-2 text-black/80 hover:bg-pale/50 hover:text-rose rounded transition">Products</a>
+                <a href="contact.html" class="block px-3 py-2 text-rose font-medium bg-pale/50 rounded">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="flex-grow">
+        <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+
+            <div class="text-center mb-16">
+                <h1 class="text-4xl md:text-5xl font-serif font-bold text-black mb-4">Get in Touch</h1>
+                <div class="w-20 h-1 bg-rose mx-auto mb-6 rounded"></div>
+                <p class="text-lg text-black/70 max-w-2xl mx-auto">Have a question or want to order a custom bouquet?
+                    Reach out to us directly or stop by our shop to see our fresh daily blooms.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-stretch">
+
+                <div
+                    class="bg-white p-8 md:p-10 rounded-3xl shadow-lg border-4 border-pale flex flex-col justify-center space-y-10">
+
+                    <div>
+                        <h3 class="text-2xl font-serif font-bold text-black mb-6">Contact Details</h3>
+                        <ul class="space-y-4 text-black/70">
+                            <li class="flex items-start">
+                                <svg class="w-6 h-6 text-rose mr-4 shrink-0 mt-1" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z">
+                                    </path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                </svg>
+                                <span>
+                                    123 Blossom Avenue<br>
+                                    Floral District<br>
+                                    Sindangan, ZDN 7112<br>
+                                    Philippines
+                                </span>
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-6 h-6 text-rose mr-4 shrink-0" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z">
+                                    </path>
+                                </svg>
+                                <a href="tel:+639000000000" class="hover:text-rose transition">+63 900 000 0000</a>
+                            </li>
+                            <li class="flex items-center">
+                                <svg class="w-6 h-6 text-rose mr-4 shrink-0" fill="none" stroke="currentColor"
+                                    viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
+                                    </path>
+                                </svg>
+                                <a href="mailto:hello@floraco.com"
+                                    class="hover:text-rose transition">hello@floraco.com</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3 class="text-2xl font-serif font-bold text-black mb-6">Business Hours</h3>
+                        <ul class="text-black/70 space-y-3">
+                            <li class="flex justify-between border-b border-pale pb-2"><span>Monday - Friday:</span>
+                                <span>8:00 AM - 6:00 PM</span></li>
+                            <li class="flex justify-between border-b border-pale pb-2"><span>Saturday:</span> <span>9:00
+                                    AM - 4:00 PM</span></li>
+                            <li class="flex justify-between text-rose font-bold pt-1"><span>Sunday:</span>
+                                <span>Closed</span></li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3 class="text-2xl font-serif font-bold text-black mb-6">Follow Our Blooms</h3>
+                        <div class="flex space-x-4">
+                            <a href="https://www.facebook.com/profile.php?id=61573693866062"
+                                class="w-14 h-14 bg-pale rounded-full flex items-center justify-center text-black hover:bg-rose hover:text-white transition shadow-sm">
+                                <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M22.675 0h-21.35C.597 0 0 .597 0 1.325v21.351C0 23.403.597 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116c.73 0 1.323-.597 1.323-1.324V1.325C24 .597 23.403 0 22.675 0z" />
+                                </svg>
+                            </a>
+                            <a href="#"
+                                class="w-14 h-14 bg-pale rounded-full flex items-center justify-center text-black hover:bg-rose hover:text-white transition shadow-sm">
+                                <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
+                                    <path
+                                        d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="w-full min-h-[400px] lg:h-full rounded-3xl overflow-hidden border-4 border-pale shadow-lg">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126600.56956247953!2d122.92348575000001!3d8.22557455!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x325a83bc2942095f%3A0xc3c50119e7ddcbab!2sSindangan%2C%20Zamboanga%20del%20Norte!5e0!3m2!1sen!2sph!4v1713500000000!5m2!1sen!2sph"
+                        width="100%" height="100%" style="border:0; min-height: 400px;" allowfullscreen=""
+                        loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+        <footer class="bg-white text-black text-center text-sm pt-8 pb-8">
+        <p>© 2026 Amor en Flor. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Burger Menu Toggle
+        const btn = document.getElementById('mobile-btn');
+        const menu = document.getElementById('mobile-menu');
+        btn.addEventListener('click', () => {
+            if (menu.classList.contains('max-h-0')) {
+                menu.classList.remove('max-h-0');
+                menu.classList.add('max-h-64');
+            } else {
+                menu.classList.remove('max-h-64');
+                menu.classList.add('max-h-0');
+            }
+        });
+    </script>
+</body>
+
+</html>

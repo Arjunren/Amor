@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amor en Flor | About</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        pale: '#F7FAD5',
+                        rose: '#D3968C',
+                        black: '#000000',
+                        white: '#FFFFFF'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-white font-sans text-black flex flex-col min-h-screen">
+
+    <nav class="bg-white shadow-sm relative z-50 border-b border-pale">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20">
+                <div class="flex items-center">
+                    <a href="index.html" class="text-3xl font-serif text-rose font-bold tracking-tight">Amor en Flor</a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-black/70 hover:text-rose transition">Home</a>
+                    <a href="about.html" class="text-rose font-medium">About</a>
+                    <a href="products.html" class="text-black/70 hover:text-rose transition">Products</a>
+                    <a href="contact.html" class="text-black/70 hover:text-rose transition">Contact</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-btn" class="text-black hover:text-rose focus:outline-none">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu"
+            class="md:hidden overflow-hidden transition-all duration-300 ease-in-out max-h-0 bg-white absolute w-full shadow-md border-b border-pale">
+            <div class="px-4 pt-2 pb-4 space-y-2">
+                <a href="index.html"
+                    class="block px-3 py-2 text-black/80 hover:bg-pale/50 hover:text-rose rounded transition">Home</a>
+                <a href="about.html" class="block px-3 py-2 text-rose font-medium bg-pale/50 rounded">About</a>
+                <a href="products.html"
+                    class="block px-3 py-2 text-black/80 hover:bg-pale/50 hover:text-rose rounded transition">Products</a>
+                <a href="contact.html"
+                    class="block px-3 py-2 text-black/80 hover:bg-pale/50 hover:text-rose rounded transition">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="flex-grow bg-rose">
+        <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 text-center">
+            <h1 class="text-4xl font-serif font-bold text-white mb-3">Our Story</h1>
+            <div class="w-24 h-1 bg-rose mx-auto mb-8 rounded"></div>
+            <p class="text-justify text-lg text-black/100 leading-relaxed mb-6">
+                At Amor en Flor, we believe that flowers are more than just plants—they are a language of love, sympathy,
+                celebration, and joy. Founded with a passion for bringing nature's most beautiful creations into
+                everyday spaces, we source our blooms locally to ensure the freshest quality.
+            </p>
+            <p class="text-lg text-black/100 leading-relaxed mb-10">
+                Whether you are planning a wedding, sending a gift to a loved one, or simply brightening up your own
+                home, our florists craft every arrangement with meticulous care and artistic flair.
+            </p>
+            
+            <img src="./about.jpg" alt="Florist working"
+                class="rounded-xl shadow-md w-full h-[500px] object-cover border-4 border-pale">
+        </main>
+    </div>
+
+    <footer class="bg-white text-black text-center text-sm pt-8 pb-8">
+        <p>© 2026 Amor en Flor. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const btn = document.getElementById('mobile-btn');
+        const menu = document.getElementById('mobile-menu');
+        btn.addEventListener('click', () => {
+            if (menu.classList.contains('max-h-0')) {
+                menu.classList.remove('max-h-0');
+                menu.classList.add('max-h-64');
+            } else {
+                menu.classList.remove('max-h-64');
+                menu.classList.add('max-h-0');
+            }
+        });
+    </script>
+</body>
+
+</html>

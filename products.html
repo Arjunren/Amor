@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amor en Flor | Products</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        rose: '#D3968C',
+                        black: '#000000',
+                        white: '#FFFFFF'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body class="bg-white font-sans text-black flex flex-col min-h-screen">
+
+    <nav class="bg-white shadow-sm relative z-50 border-b border-black/10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20">
+                <div class="flex items-center">
+                    <a href="index.html" class="text-3xl font-serif text-rose font-bold tracking-tight">Amor en Flor</a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="text-black/70 hover:text-rose transition">Home</a>
+                    <a href="about.html" class="text-black/70 hover:text-rose transition">About</a>
+                    <a href="products.html" class="text-rose font-medium">Products</a>
+                    <a href="contact.html" class="text-black/70 hover:text-rose transition">Contact</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-btn" class="text-black hover:text-rose focus:outline-none">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu"
+            class="md:hidden overflow-hidden transition-all duration-300 ease-in-out max-h-0 bg-white absolute w-full shadow-md border-b border-black/10">
+            <div class="px-4 pt-2 pb-4 space-y-2">
+                <a href="index.html"
+                    class="block px-3 py-2 text-black/80 hover:bg-black/5 hover:text-rose rounded transition">Home</a>
+                <a href="about.html"
+                    class="block px-3 py-2 text-black/80 hover:bg-black/5 hover:text-rose rounded transition">About</a>
+                <a href="products.html" class="block px-3 py-2 text-rose font-medium bg-black/5 rounded">Products</a>
+                <a href="contact.html"
+                    class="block px-3 py-2 text-black/80 hover:bg-black/5 hover:text-rose rounded transition">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="flex-grow">
+        <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+
+            <div class="text-center mb-10">
+                <h1 class="text-4xl md:text-5xl font-serif font-bold text-rose mb-4">Our Collection</h1>
+                <div class="w-20 h-1 bg-rose mx-auto mb-6 rounded"></div>
+                <p class="text-lg text-black">Find the perfect arrangement. Message us to place an order for delivery
+                    or pickup.</p>
+            </div>
+
+            <div
+                class="bg-rose border-2 border-rose p-6 rounded-2xl mb-12 flex flex-col md:flex-row gap-4 justify-between items-center shadow-sm">
+
+                <div class="w-full md:w-1/2 relative">
+                    <svg class="w-5 h-5 absolute left-3 top-1/2 transform -translate-y-1/2 text-black/40" fill="none"
+                        stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                    </svg>
+                    <input type="text" id="search-input" placeholder="Search bouquets..."
+                        class="w-full pl-10 pr-4 py-3 rounded-xl border-2 border-black focus:border-black focus:ring-black outline-none transition bg-white text-black">
+                </div>
+
+                <div class="w-full md:w-auto">
+                    <select id="sort-filter"
+                        class="w-full md:w-56 px-4 py-3 rounded-xl border-2 border-black focus:border-black outline-none transition bg-white text-black cursor-pointer">
+                        <option value="default">Sort: Featured</option>
+                        <option value="price-asc">Price: Low to High</option>
+                        <option value="price-desc">Price: High to Low</option>
+                    </select>
+                </div>
+
+            </div>
+
+            <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                </div>
+
+            <div id="empty-state" class="hidden text-center py-12">
+                <svg class="w-16 h-16 text-black/20 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                </svg>
+                <h3 class="text-2xl font-serif font-bold text-black mb-2">No blooms found</h3>
+                <p class="text-black/70">Try adjusting your filters or searching for something else.</p>
+            </div>
+        </main>
+    </div>
+
+    <footer class="bg-white text-black text-center text-sm pt-8 pb-8">
+        <p>© 2026 Amor en Flor. All rights reserved.</p>
+    </footer>
+
+    <script src="data.js"></script>
+
+    <script>
+        // DOM Elements
+        const productGrid = document.getElementById('product-grid');
+        const searchInput = document.getElementById('search-input');
+        const sortFilter = document.getElementById('sort-filter');
+        const emptyState = document.getElementById('empty-state');
+
+        // Helper: Convert "$45.00" string to number 45.00
+        function parsePrice(priceString) {
+            return parseFloat(priceString.replace(/[^0-9.-]+/g, ""));
+        }
+
+        // Render Function
+        function renderProducts(productsToRender) {
+            productGrid.innerHTML = '';
+
+            if (productsToRender.length === 0) {
+                emptyState.classList.remove('hidden');
+            } else {
+                emptyState.classList.add('hidden');
+
+                productsToRender.forEach(flower => {
+                    const card = document.createElement('div');
+                    card.className = "bg-white rounded-3xl overflow-hidden shadow-md hover:shadow-xl transition duration-300 border-2 border-rose flex flex-col";
+
+                    card.innerHTML = `
+                        <img src="${flower.picture}" alt="${flower.title}" class="w-full aspect-[3/4] object-cover border-b-2 border-rose">
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3 class="text-xl font-bold font-serif text-black mb-2">${flower.title}</h3>
+                            <p class="text-rose font-bold text-2xl mb-6">${flower.price}</p>
+                            <div class="mt-auto">
+                                <a href="https://www.facebook.com/kristineamor07" class="block text-center w-full bg-black text-white font-medium py-3 rounded-xl hover:bg-rose transition shadow-sm">Message Us</a>
+                            </div>
+                        </div>
+                    `;
+                    productGrid.appendChild(card);
+                });
+            }
+        }
+
+        // Filter and Sort Logic
+        function applyFilters() {
+            const searchTerm = searchInput.value.toLowerCase();
+            const sortMethod = sortFilter.value;
+
+            // 1. Filter the array by search term
+            let filteredFlowers = flowers.filter(flower => {
+                return flower.title.toLowerCase().includes(searchTerm);
+            });
+
+            // 2. Sort the filtered array
+            if (sortMethod === 'price-asc') {
+                filteredFlowers.sort((a, b) => parsePrice(a.price) - parsePrice(b.price));
+            } else if (sortMethod === 'price-desc') {
+                filteredFlowers.sort((a, b) => parsePrice(b.price) - parsePrice(a.price));
+            } else {
+                // 'default' sorts by original ID
+                filteredFlowers.sort((a, b) => a.id - b.id);
+            }
+
+            // 3. Render
+            renderProducts(filteredFlowers);
+        }
+
+        // Event Listeners for Filters
+        searchInput.addEventListener('input', applyFilters);
+        sortFilter.addEventListener('change', applyFilters);
+
+        // Initial Render
+        renderProducts(flowers);
+
+        // Mobile Menu Toggle
+        const btn = document.getElementById('mobile-btn');
+        const menu = document.getElementById('mobile-menu');
+        btn.addEventListener('click', () => {
+            if (menu.classList.contains('max-h-0')) {
+                menu.classList.remove('max-h-0');
+                menu.classList.add('max-h-64');
+            } else {
+                menu.classList.remove('max-h-64');
+                menu.classList.add('max-h-0');
+            }
+        });
+    </script>
+</body>
+
+</html>
