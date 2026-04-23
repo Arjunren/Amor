@@ -69,7 +69,3 @@ The project is organized into modular HTML templates for easy maintenance:
 ## 📄 License
 
 This project is licensed under the MIT License - see the `LICENSE` file for details.
-
----
-
-**Crafted with meticulous care by [Arjunren Von](https://github.com/yourusername)**
